@@ -13,8 +13,7 @@ public class CreditService {
      * @param months               - количество месяцев
      */
     public static int getMonthlyPayment(int loanAmount, int creditRateInPercents, int months) {
-        /*TODO*/
-        return 0;
+        return getTotalSum(loanAmount, creditRateInPercents) / months;
     }
 
     /**
@@ -24,8 +23,7 @@ public class CreditService {
      * @param creditRateInPercents - кредитная ставка в процентах
      */
     public static int getTotalSum(int loanAmount, int creditRateInPercents) {
-        /*TODO*/
-        return 0;
+        return loanAmount / 100 * (100 + creditRateInPercents);
     }
 
     /**
@@ -35,7 +33,6 @@ public class CreditService {
      * @param creditRateInPercents - кредитная ставка в процентах
      */
     public static int getOverpayment(int loanAmount, int creditRateInPercents) {
-        /*TODO*/
-        return 0;
+        return getTotalSum(loanAmount, creditRateInPercents) - loanAmount;
     }
 }
